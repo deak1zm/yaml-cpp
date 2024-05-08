@@ -1,6 +1,6 @@
 project "yaml-cpp"
   kind "StaticLib"
-  landguage "C++"
+  language "C++"
 
   targetdir("bin/" .. outputdir .. "/%{prj.name}")
   targetdir("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -17,31 +17,31 @@ project "yaml-cpp"
     "include"
   }
 
-  filter "system::windows"
-        pic "On"
-        systemversion "latest"
-        cppdialet "C++20"
-        staticruntime "On"
+  filter "system:windows"
+      pic "On"
+      systemversion "latest"
+      cppdialect "C++20"
+      staticruntime "On"
 
-   filter "system::macosx"
-        pic "On"
-        systemversion "11.0"
-        cppdialet "C++20"
-        staticruntime "On"
+   filter "system:macosx"
+      pic "On"
+      systemversion "11.0"
+      cppdialect "C++20"
+      staticruntime "On"
 
-  filter "system::linux"
-        pic "On"
-        systemversion "latest"
-        cppdialet "C++20"
-        staticruntime "On"
+  filter "system:linux"
+      pic "On"
+      systemversion "latest"
+      cppdialect "C++20"
+      staticruntime "On"
 
-     filter "configurations:Debug"
-        runtime "Debug"
-        symbols "on"
+  filter "configurations:Debug"
+      runtime "Debug"
+      symbols "on"
 
-      filter "configurations:Release"
-        runtime "Release"
-        optimize "on"
+  filter "configurations:Release"
+      runtime "Release"
+      optimize "on"
 
     
   
